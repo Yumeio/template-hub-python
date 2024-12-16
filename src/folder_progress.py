@@ -1,14 +1,7 @@
-import os, requests
-from os.path import expanduser
-from typing import Dict, List, Optional, Tuple
-
-class Repository():
-    def __init__(self, *args, **kwargs):
-        for key, value in kwargs.items():
-            setattr(self, key, value)
+import os
 
 class FolderProgress():
-    path_token = expanduser("~/.test-hub/token");
+    path_token = os.path.expanduser("~/.test-hub/token");
     
     @classmethod
     def add_token(cls, token: str) -> None:
@@ -30,6 +23,3 @@ class FolderProgress():
             os.remove(cls.path_token)
         except FileNotFoundError:
             pass
-
-obj = Repository(name="my-repo", owner="my-owner")
-print(obj.name)

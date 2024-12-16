@@ -16,3 +16,10 @@ pytorch_lightning
 absl-py
 git
 pytest
+fastapi
+uvicorn
+sqlalchemy
+pymysql
+bcrypt
+python-jose[cryptography]
+python-multipart
